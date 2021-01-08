@@ -16,7 +16,7 @@ router.get("/", function (req, res) {
         }
 
         console.log('Burgers: ', burgers);
-        res.render("index", { burgers });
+        res.render("index", { burgers, style: 'style' });
     });
 });
 
