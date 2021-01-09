@@ -6,6 +6,14 @@ const orm = {
             if (err) cb(err, null);
             cb (null, data);
         });
+    },
+
+    isnertOne: function(burgerName, cb) {
+        let sqlQuery = `INSERT INTO burgers (burger_name) VALUES ('${burgerName}')`;
+        connection.query(sqlQuery, function (err, data) {
+            if (err) cb(err, null);
+            cb (null, data);
+        });
     }
 }
 

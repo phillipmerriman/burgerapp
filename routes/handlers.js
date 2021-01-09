@@ -20,5 +20,24 @@ router.get("/", function (req, res) {
     });
 });
 
+router.post('/add', (req, res) => {
+    
+    const burgerName = req.body.burger_name;
+
+    orm.isnertOne(burgerName, function(error, burger) {
+        if (error) {
+            return res.status(401).json({
+                message: "Not able to add the burger"
+            });
+        }
+        //set up data to be inserted into database
+        return res.json({
+           burger_name: burgerName,
+           id: burger.insertId,
+           devoured: 0
+        });
+    });
+});
+
   // Export routes for server.js to use.
   module.exports = router;  
