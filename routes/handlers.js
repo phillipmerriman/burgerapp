@@ -20,6 +20,8 @@ router.get("/", function (req, res) {
     });
 });
 
+// router.get("/all")
+
 router.post('/add', (req, res) => {
     
     const burgerName = req.body.burger_name;
