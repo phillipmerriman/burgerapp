@@ -8,9 +8,16 @@ const orm = {
         });
     },
 
-    isnertOne: function(burgerName, cb) {
+    insertOne: function(burgerName, cb) {
         let sqlQuery = `INSERT INTO burgers (burger_name) VALUES ('${burgerName}')`;
         connection.query(sqlQuery, function (err, data) {
+            if (err) cb(err, null);
+            cb (null, data);
+        });
+    },
+
+    updateOne: function(burgerId, cb) {
+        connection.query(`UPDATE burgers SET devoured = true WHERE id = ${burgerId}`, function (err, data) {
             if (err) cb(err, null);
             cb (null, data);
         });

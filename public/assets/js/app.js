@@ -8,7 +8,7 @@ const burgerTemplate = (burgerName, id, devoured) => {
 
     const button = $("<button>").attr({
         "data-id": id,
-        class: "btn btn-default favorites",
+        class: "btn btn-default favorites dev",
         "data-state": devoured
     });
 
@@ -29,6 +29,8 @@ const displayNewBurger = (burger) => {
 
     $(".content-burger").prepend(newBurger);
     $("input").val("");
+
+    location.reload();
 };
 
 const addBurgerFail = (response) => {
@@ -48,3 +50,19 @@ $("button[type='submit']").on("click", function (event) {
         }
     }).then(displayNewBurger).catch(addBurgerFail);
 });
+
+$(".dev").on("click", function(event){
+    const id = $(this).attr("data-id");
+    console.log("devour clicked ", id);
+    //move devoured burger to devour list, by updating devoured to true
+    $.ajax({
+        url: "/add",
+        method: "PUT",
+        data: {
+            id: id
+        }
+    }).then(() => {
+        location.reload();
+    })
+    
+})

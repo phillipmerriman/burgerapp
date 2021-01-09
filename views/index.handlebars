@@ -16,12 +16,26 @@
 
     <div class="content-burger">
         {{#each burgers}} 
-            <div class="content-burger__list" id={{id}}>
-                <p>{{ burger_name }}</p>
-                <button class="btn btn-default favorites" data-id="{{id}}" data-state="{{ devoured }}">
-                    {{#if devoured}} undevour {{else}} Devour! {{/if}}
-                </button>
-            </div>
+            {{#unless devoured}}
+                <div class="content-burger__list" id={{id}}>
+                    <p>{{ burger_name }}</p>
+                    <button class="btn btn-default favorites dev" data-id="{{id}}" data-state="{{ devoured }}">
+                        {{#if devoured}} Remove Burger {{else}} Devour! {{/if}}
+                    </button>
+                </div>
+            {{/unless}}
+        {{/each}}
+
+        {{#each burgers}} 
+            {{#if devoured}}
+                <div class="content-burger__list" id={{id}}>
+                    <p>{{ burger_name }}</p>
+                    <button class="btn btn-default favorites " data-id="{{id}}" data-state="{{ devoured }}">
+                        {{#if devoured}} Remove Burger {{else}} Devour! {{/if}}
+                    </button>
+                </div>
+            {{/if}}
         {{/each}}
     </div>
+
 </div>

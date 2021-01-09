@@ -26,7 +26,7 @@ router.post('/add', (req, res) => {
     
     const burgerName = req.body.burger_name;
 
-    orm.isnertOne(burgerName, function(error, burger) {
+    orm.insertOne(burgerName, function(error, burger) {
         if (error) {
             return res.status(401).json({
                 message: "Not able to add the burger"
@@ -38,6 +38,19 @@ router.post('/add', (req, res) => {
            id: burger.insertId,
            devoured: 0
         });
+    });
+});
+
+router.put('/add', (req, res) => {
+    const burgerId = req.body.id;
+
+    orm.updateOne(burgerId, function (error, response) {
+        if (error) {
+            return res.status(401).json({
+                message: "Not able to devour burger. You are too fullllllllll......."
+            });
+        }
+        return res.json(response);
     });
 });
 
