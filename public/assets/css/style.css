@@ -18,3 +18,12 @@ body {
 .text-main-field {
     font-weight: 700;
 }
+
+.burger-name {
+    font-weight: 600;
+    font-size: 35px;
+}
+
+.btn {
+    margin: 10px;
+}

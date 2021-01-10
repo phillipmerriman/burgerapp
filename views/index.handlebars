@@ -32,7 +32,7 @@
             <div class="content-burger">
                 {{#each burgers}}
                 {{#unless devoured}}
-                <div class="content-burger__list" id={{id}}>
+                <div class="content-burger__list burger-name border border-dark rounded" id={{id}}>
                     <p>{{ burger_name }}</p>
                     <button class="btn btn-default favorites dev" data-id="{{id}}" data-state="{{ devoured }}">
                         {{#if devoured}} Remove Burger {{else}} Devour! {{/if}}
@@ -46,11 +46,11 @@
 
         <div class="col-md-6">
 
-            <h2>And These Bad Boys Have Been Devoured</h2>
+            <h2>And These Bad Boys Have Been Devoured:</h2>
             <div>
                 {{#each burgers}}
                 {{#if devoured}}
-                <div class="content-burger__list" id={{id}}>
+                <div class="content-burger__list burger-name border border-dark rounded" id={{id}}>
                     <p>{{ burger_name }}</p>
                     <button class="btn btn-default favorites del" data-id="{{id}}" data-state="{{ devoured }}">
                         {{#if devoured}} Remove Burger {{else}} Devour! {{/if}}
