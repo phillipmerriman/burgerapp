@@ -1,6 +1,8 @@
 # burgerapp
 This live application allows you to see the burgers, add new burgers, devour the burgers, and delete the devoured burgers using Node.js, Express, Express-Handlebars, and MySQL.
 
+## Screenshots
+![Screenshot of app](public/assets/images/screenshot-of-app.PNG)
 
 ## Getting Started
 Click [here](https://cryptic-brushlands-50652.herokuapp.com/) to see it in action!
