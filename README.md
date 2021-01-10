@@ -1,16 +1,9 @@
 # burgerapp
-This live application allows you to see the burgers, add new burgers, devour the brugers, and delete the devoured burgers using Node.js, Express, Express-Handlebars, and MySQL.
+This live application allows you to see the burgers, add new burgers, devour the burgers, and delete the devoured burgers using Node.js, Express, Express-Handlebars, and MySQL.
 
 
 ## Getting Started
-You need to set up your MySQL database before you can run the code: 
-
-    1. Download and unzip the code, and install the prerequisites, as explained in the "Installing" section of this README.
-    2. In your "employee-tracker-main" directory there is a "db" directory. In that directory there are two files: cms-schema.sql and cms-seeds.sql. 
-        a. Open your MySQL Workbench and run cms-schema.sql to create the database and tables.
-        b. Then run cms-seeds.sql to populate the database with some data. (Bonus points if you recognize some of the people in your database.)
-    3. Now that your database is ready to be queried, open connections.js and replace the MySQL root password on line 13 with your MySQL root password.
-    4. Open a Git terminal. Type "node app.js" to invoke the application.
+Click [here](https://cryptic-brushlands-50652.herokuapp.com/) to see it in action!
 
 
 ## Built With
@@ -27,7 +20,7 @@ You need to set up your MySQL database before you can run the code:
        
 
 ## Contributing
-This project is not open to contributions.
+This project is not open to contributions at this time.
 
 ## Versioning
 This project does not use versions at this time. 
