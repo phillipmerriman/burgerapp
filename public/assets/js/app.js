@@ -65,4 +65,19 @@ $(".dev").on("click", function(event){
         location.reload();
     })
     
-})
+});
+
+$(".del").on("click", function (event) {
+    const id = $(this).attr("data-id");
+    console.log("delete clicked ", id);
+
+    $.ajax({
+        url: "/add",
+        method: "DELETE",
+        data: {
+            id: id
+        }
+    }).then(() => {
+        location.reload();
+    });
+});

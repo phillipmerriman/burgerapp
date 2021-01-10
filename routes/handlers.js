@@ -54,5 +54,18 @@ router.put('/add', (req, res) => {
     });
 });
 
+router.delete('/add', (req, res) => {
+    const burgerId = req.body.id;
+
+    orm.deleteOne(burgerId, function (error, response) {
+        if (error) {
+            return res.status(401).json({
+                message: "Not able to delete the burger. Alert your local authorities."
+            });
+        }
+        return res.json(response);
+    });
+});
+
   // Export routes for server.js to use.
   module.exports = router;  

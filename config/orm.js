@@ -21,6 +21,13 @@ const orm = {
             if (err) cb(err, null);
             cb (null, data);
         });
+    },
+
+    deleteOne: function(burgerId, cb) {
+        connection.query(`DELETE FROM burgers WHERE id = ${burgerId}`, function (err, data) {
+            if (err) cb(err, null);
+            cb (null, data);
+        });
     }
 }
 
