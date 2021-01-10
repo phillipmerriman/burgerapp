@@ -1,3 +1,20 @@
 body {
     background-color: #eeba0b;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.navbar-center {
+    /* position: absolute; */
+    width: 100%;
+    /* left: 0;
+    top: 0; */
+    text-align: center;
+    /* overflow: visible; */
+    /* height: 500px; */
+    font-family: 'Hachi Maru Pop', cursive;
+    font-size: 60px;
+}
+
+.text-main-field {
+    font-weight: 700;
 }
