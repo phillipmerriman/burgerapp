@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const exphbs = require("express-handlebars");
 
 // import routes
-const routes = require("./routes/handlers");
+const routes = require("./models/handlers");
 
 // Set the port of our application
 // process.env.PORT lets the port be set by Heroku
